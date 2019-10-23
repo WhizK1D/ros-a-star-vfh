@@ -1,0 +1,15 @@
+<launch>
+
+    <!-- Initialize the stage simulator with supplied world files -->
+    <node type="stageros" name="stage_sim" pkg="stage_ros" args="-d $(find ros_pa2)/world/playground.world" />
+    <node type="overwatch.py" pkg="ros_pa2" name="Overwatch"/>
+    <node type="vfh.py" pkg="ros_pa2" name="VFH" />
+    <node type="a_star_launcher.py" pkg="ros_pa2" name="a_star_launcher" />
+
+    <!-- Define goal location using ROS parameters -->
+    <rosparam>
+        goalx: 5.0
+        goaly: 5.0
+    </rosparam>
+
+</launch>
