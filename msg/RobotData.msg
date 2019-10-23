@@ -1,0 +1,3 @@
+GridLocation gridLocation
+MapLocation mapLocation
+string state
